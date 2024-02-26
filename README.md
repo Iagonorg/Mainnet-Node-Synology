@@ -2,7 +2,7 @@
 
 This is the repo for mainnet node synology. This uses preview network in cardano.
 
-Preview dashboard link -> https://app.stage.iagon.com/provider
+Preview dashboard link -> https://app.iagon.com/provider
 
 # Pre-installation
 
