@@ -62,3 +62,68 @@ This is the repo for mainnet node synology.
 
 ![start-stop](./assets/step-11.png)
 
+# View package installation and binary logs
+
+Adopt following steps to view synology packages installation logs.
+
+1. Open Task Scheduler from the services tab inside the DSM control panel.
+2. Create a new Triggered Task (User-defined Script).
+
+![task-scheduler](./assets/step-12.png)
+
+3. Give a name to the task, set the User to root and the Event to Boot-up.
+
+![name-task](./assets/step-13.png)
+
+4. Paste the script below in the User-defined script section in Task settings. (Ps. Mind the spaces between the paths specified)
+
+```
+mkdir /<volume>/<some-shared-folder>/iagon-bin-logs
+mkdir /<volume>/<some-shared-folder>/package-logs
+mount --bind /volume1/@apphome/IagonNode /<volume>/<some-shared-folder>/iagon-bin-logs
+mount --bind /var/log/packages /<volume>/<some-shared-folder>/package-logs
+```
+
+a. <volume> = volume of the device, eg. volume1
+b. <some-shared-folder> = shared folder in the volume, eg. tmp
+
+5. Click Ok to save.
+
+![save](./assets/step-14.png)
+
+
+6. Reboot the system for the changes to take effect. After that you can see the folders being created in the shared-folder specified before.
+
+![reboot](./assets/step-15.png)
+
+
+- The installation logs can be found under the package-logs folder, named IagonNode.log 
+- The logs related to the IagonNode itself can be found under iagon-bin-logs, the logs here are similar to that of iagon-node-cli.
+
+*Note: It is always a good idea to unmount the system folders after use cases. For that you can create another Triggered Task (User-defined Script).
+
+# Remove the logs
+
+1. Create another Triggered Task (User-defined Script).
+
+![triggered-task](./assets/step-16.png)
+
+2. Paste the script below in the User-defined script section in Task settings. (Ps. Mind the spaces between the paths specified)
+
+```
+unmount /<volume>/<some-shared-folder>/iagon-bin-logs
+unmount /<volume>/<some-shared-folder>/package-logs
+```
+
+a. <volume> = volume of the device, eg. volume1
+b. <some-shared-folder> = shared folder in the volume, eg. tmp
+
+3. Click Ok to save.
+
+![save](./assets/step-17.png)
+
+4. Reboot the system for the changes to take effect. After that you can see the folders inside being removed. 
+
+*Note: Remember to uncheck the iagon-logs task before applying this iagon-logs-unmount task.
+
+
