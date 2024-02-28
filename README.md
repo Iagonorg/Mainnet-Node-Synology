@@ -84,8 +84,8 @@ mount --bind /volume1/@apphome/IagonNode /<volume>/<some-shared-folder>/iagon-bi
 mount --bind /var/log/packages /<volume>/<some-shared-folder>/package-logs
 ```
 
-a. <volume> = volume of the device, eg. volume1
-b. <some-shared-folder> = shared folder in the volume, eg. tmp
+- `<volume> = volume of the device, eg. volume1`
+- `<some-shared-folder> = shared folder in the volume, eg. tmp`
 
 5. Click Ok to save.
 
@@ -115,8 +115,8 @@ unmount /<volume>/<some-shared-folder>/iagon-bin-logs
 unmount /<volume>/<some-shared-folder>/package-logs
 ```
 
-a. <volume> = volume of the device, eg. volume1
-b. <some-shared-folder> = shared folder in the volume, eg. tmp
+- `<volume> = volume of the device, eg. volume1`
+- `<some-shared-folder> = shared folder in the volume, eg. tmp`
 
 3. Click Ok to save.
 
