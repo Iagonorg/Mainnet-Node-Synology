@@ -17,14 +17,19 @@ This is the repo for mainnet node synology.
 ![create-a-folder](./assets/step-1.png)
 
 3. Change permissions to the folder just created.
+
     a. Right click and navigate to properties, and to the permissions tab.
+
     b. Click on create button to add new user/group.
+    
     c. Select Everyone for user or group.
+    
     d. Grant ‘Take ownership’ and Read/Write permissions and Save.
 
-![take-ownership](./assets/step-2.png)
+![take-ownership](./assets/step-2.webp)
 
 4. Go to the package center and select manual install and go through the wizard installation process
+
     a. Select the spk file for your synology device.
 
 ![upload-a-package](./assets/step-3.png)
