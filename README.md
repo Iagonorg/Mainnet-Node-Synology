@@ -54,7 +54,7 @@ This is the repo for mainnet node synology.
 
 ![enter-auth-key](./assets/step-8.png)
 
-5. Once installed, you’ll be prompted with the auth-key after installation. The key will also be available in a file inside the storage path that you set during the installation process. *(Auth key is required to stake the node in the resource provider dashboard).
+5. Once installed, you’ll be prompted with the auth-key after installation. Write this key down, as it will not be shown again. *(Auth key is required to stake the node in the resource provider dashboard).
 
 ![auth-key](./assets/step-9.png)
 
